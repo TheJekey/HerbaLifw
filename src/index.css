@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+
+@font-face {
+    font-family: 'Font-1';
+    src: url('/Herbalife-Walsheim-GT-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font-2';
+    src: url('/HerbalifeNatural-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font-3';
+    src: url('/HerbalifeNatural-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font-4';
+    src: url('/myherbalife.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font-5';
+    src: url('/notosans-regular.ttf') format('truetype');
+}
