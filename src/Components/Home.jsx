@@ -78,9 +78,16 @@ const Home = () => {
                         <span className="block">with us!</span>
                     </h1>
                     <div className="mt-8 sm:mt-10 lg:mt-12">
-                        <Button text="Get Started" className="bg-[#1d4e26] text-black " />
+                        <Button
+                            text="Contact-Us"
+                            className="bg-[#1d4e26] text-black cursor-pointer  "
+                            onClick={() => {
+                                const message = encodeURIComponent('Hi, I would like to learn more.')
+                                window.open(`https://wa.me/919587489877?text=${message}`, '_blank', 'noopener,noreferrer')
+                            }}
+                        />
                     </div>
-                    <div className="video absolute top-[43%] left-[56%] overflow-hidden transform -translate-x-1/2 -translate-y-1/2 h-[65px] w-[120px] bg-black rounded-xl ">
+                    <div className="hidden  video absolute top-[43%] left-[56%] overflow-hidden transform -translate-x-1/2 -translate-y-1/2 h-[65px] w-[120px] bg-black rounded-xl ">
                         <div className="overflow-hidden w-full h-full ">
                             <video src="./Video.mp4 " loop autoPlay muted></video>
                         </div>

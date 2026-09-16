@@ -7,7 +7,15 @@ const footerGroups = [
     },
     {
         title: 'SOCIALS',
-        links: ['WhatsApp', 'Facebook', 'Instagram', 'Gmail'],
+        links: [
+            {
+                label: 'WhatsApp',
+                href: 'https://wa.me/919587489877?text=Hi!%20I%27m%20interested%20in%20your%20health%20%26%20wellness%20services.%20I%27d%20love%20to%20know%20more.',
+            },
+            { label: 'Facebook', href: 'https://www.facebook.com/' },
+            { label: 'Instagram', href: 'https://www.instagram.com/fitwithjekey/' },
+            { label: 'Gmail', href: 'mailto:workwithjekey@gmail.com' },
+        ],
     },
     {
         title: 'LEGAL',
@@ -111,20 +119,44 @@ const Footer = () => {
                                 </div>
                             ) : (
                                 <ul className="space-y-1.5 text-">
-                                    {links.map((link) => (
-                                        <li key={link}>
-                                            <a
-                                                href="#"
-                                                className="text-md inline-block leading-6 transition-opacity hover:opacity-65 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:text-base"
-                                            >
-                                                {link}
-                                            </a>
-                                        </li>
-                                    ))}
+                                    {links.map((link) => {
+                                        const href = typeof link === 'string' ? '#' : link.href
+                                        const label = typeof link === 'string' ? link : link.label
+
+                                        return (
+                                            <li key={label}>
+                                                <a
+                                                    href={href}
+                                                    target={typeof link === 'string' ? undefined : '_blank'}
+                                                    rel={typeof link === 'string' ? undefined : 'noopener noreferrer'}
+                                                    className="text-md inline-block leading-6 transition-opacity hover:opacity-65 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:text-base"
+                                                >
+                                                    {label}
+                                                </a>
+                                            </li>
+                                        )
+                                    })}
                                 </ul>
                             )}
                         </nav>
                     ))}
+                </div>
+
+                <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+                    <a
+                        href="https://wa.me/919587489877?text=Hi!%20I'm%20interested%20in%20your%20health%20%26%20wellness%20services.%20I'd%20love%20to%20know%20more."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-medium text-[#1D4E26] transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                    >
+                        WhatsApp Chat
+                    </a>
+                    <a
+                        href="tel:+919587489877"
+                        className="inline-flex items-center justify-center rounded-full border border-white/60 px-6 py-3 font-medium text-white transition-colors hover:bg-white hover:text-[#1D4E26] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                    >
+                        Call 9587489877
+                    </a>
                 </div>
 
                 <div className="mt-12 flex flex-col gap-1.5 border-t border-white/20 pt-5 text-[0.6875rem] leading-5 tracking-normal text-white/65 sm:mt-16 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:text-xs">

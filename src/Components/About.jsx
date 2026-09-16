@@ -17,7 +17,7 @@ const About = () => {
                         />
                     </div>
                     <div className="absolute -bottom-5 right-4 max-w-[12rem] rounded-xl bg-[#1d4e26] px-5 py-4 text-white shadow-xl sm:right-8">
-                        <p className="font-[font-3] text-3xl leading-none">6+</p>
+                        <p className="font-[font-3] text-3xl leading-none">2+</p>
                         <p className="mt-1 text-[0.6875rem] uppercase leading-4 tracking-[0.14em] text-white/70">
                             years of wellness coaching
                         </p>
@@ -33,7 +33,7 @@ const About = () => {
                     </h2>
                     <div className="mt-7 max-w-xl space-y-4 text-sm leading-6 text-[#1d4e26]/75 sm:mt-9 sm:text-base sm:leading-7">
                         <p>
-                            I help people build a healthier relationship with food, movement, and everyday habits.
+                            I help people loose and gain weight with easy steps and simple diet plans. I believe in a holistic approach to health and wellness, focusing on both physical and mental well-being. My goal is to empower individuals to make sustainable lifestyle changes that lead to long-term health and happiness.
                         </p>
                         <p>
                             Every plan is personal, practical, and designed to fit your real life. No extreme rules, just consistent support and progress you can feel proud of.
@@ -42,11 +42,11 @@ const About = () => {
 
                     <div className="mt-8 grid max-w-xl grid-cols-3 border-y border-[#1d4e26]/15 py-5 sm:mt-10 sm:py-6">
                         <div>
-                            <p className="font-[font-3] text-2xl sm:text-3xl">40+</p>
+                            <p className="font-[font-3] text-2xl sm:text-3xl">20+</p>
                             <p className="mt-1 text-[0.625rem] uppercase tracking-[0.12em] text-[#1d4e26]/60 sm:text-xs">clients</p>
                         </div>
                         <div className="border-l border-[#1d4e26]/15 pl-4 sm:pl-6">
-                            <p className="font-[font-3] text-2xl sm:text-3xl">95%</p>
+                            <p className="font-[font-3] text-2xl sm:text-3xl">97%</p>
                             <p className="mt-1 text-[0.625rem] uppercase tracking-[0.12em] text-[#1d4e26]/60 sm:text-xs">success rate</p>
                         </div>
                         <div className="border-l border-[#1d4e26]/15 pl-4 sm:pl-6">
@@ -56,7 +56,11 @@ const About = () => {
                     </div>
 
                     <div className="mt-8 sm:mt-10">
-                        <Button text="Know more" className="bg-[#1d4e26] text-black " />
+                        <Button text="Chat on Whatsapp" className="bg-[#1d4e26] text-white  cursor-pointer "
+                            onClick={() => {
+                                const message = encodeURIComponent("Hi! I'm intersted in your health & wellness services. I'd love to know more.")
+                                window.open(`https://wa.me/919587489877?text=${message}`, '_blank', 'noopener,noreferrer')
+                            }} />
                     </div>
                 </div>
             </div>
