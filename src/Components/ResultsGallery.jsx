@@ -1,3 +1,5 @@
+import Footer from "./Footer"
+
 const galleryImages = [
   ...[1, 2, 3, 4, 5, 6].map((index) => ({
     src: `/Herbalife/image-${index}.png`,
@@ -9,12 +11,18 @@ const galleryImages = [
   })),
 ]
 
-const ResultsGallery = () => {
+const ResultsGallery = ({ onBack }) => {
   return (
     <main className="min-h-screen bg-[#f4f7f1] px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
       <div className="mx-auto max-w-7xl">
         <a
           href="/"
+          onClick={(event) => {
+            if (onBack) {
+              event.preventDefault()
+              onBack()
+            }
+          }}
           className="mb-10 inline-flex rounded-full border border-[#1d4e26]/25 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-[#1d4e26] transition hover:bg-[#1d4e26] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#1d4e26] focus:ring-offset-2"
         >
           Back to home
@@ -40,6 +48,9 @@ const ResultsGallery = () => {
         <p className="mx-auto mt-10 w-fit max-w-full rounded-xl bg-[#d9ead8] px-4 py-3 text-center text-sm font-medium leading-5 text-[#1d4e26] sm:px-5">
           * Weight and timing may vary from person to person.
         </p>
+      </div>
+      <div className="footer w-full h-full">
+        <Footer />
       </div>
     </main>
   )

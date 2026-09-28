@@ -22,7 +22,7 @@ const ResultCard = ({ result }) => {
   )
 }
 
-const Result = ({ results = defaultResults }) => {
+const Result = ({ results = defaultResults, onViewMore }) => {
   return (
     <section id="results" className="w-full bg-[#f4f7f1] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-28" aria-labelledby="results-heading">
       <div className="mx-auto max-w-7xl">
@@ -48,6 +48,10 @@ const Result = ({ results = defaultResults }) => {
 
         <a
           href="/results"
+          onClick={(event) => {
+            event.preventDefault()
+            onViewMore?.()
+          }}
           className="mx-auto mt-10 block w-fit rounded-full bg-[#1d4e26] px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#286b33] focus:outline-none focus:ring-2 focus:ring-[#1d4e26] focus:ring-offset-2"
         >
           View more results
