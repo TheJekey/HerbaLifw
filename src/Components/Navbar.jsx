@@ -11,7 +11,7 @@ const Navbar = () => {
                 aria-label="Primary navigation"
             >
                 <div className="mx-auto flex h-auto w-full max-w-7xl items-center justify-between">
-                    <a href="#home" className="font-[font-2] text-base uppercase tracking-[0.08em]">
+                    <a href="#Home" className="font-[font-2] text-base uppercase tracking-[0.08em]">
                         JEKEY
                     </a>
                     <button

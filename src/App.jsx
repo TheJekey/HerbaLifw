@@ -14,12 +14,12 @@ const App = () => {
 
   const scroll = new LocomotiveScroll();
   return (
-    <div>
+    <div className="selection:bg-[#1D4E26] selection:text-[#fff]  ">
       <Home />
       <About />
       <Result />
-      <Testimonial />
       <FQ />
+      <Testimonial />
       <Footer />
     </div>
   )

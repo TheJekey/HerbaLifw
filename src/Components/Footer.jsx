@@ -108,7 +108,7 @@ const Footer = () => {
                                         className="group block focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                                     >
                                         <img
-                                            src="/Foodlicence.webp"
+                                            src="/Black.png"
                                             alt="View food licence"
                                             className="aspect-[4/3] w-full max-w-[15rem] rounded-lg border border-white/20 bg-white/10 object-cover transition-opacity group-hover:opacity-80"
                                         />

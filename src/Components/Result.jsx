@@ -3,6 +3,11 @@ const defaultResults = Array.from({ length: 5 }, (_, index) => ({
   name: `Transformation story ${index + 1}`,
 }))
 
+defaultResults.push({
+  image: '/Herbalife/image-6.png',
+  name: 'Transformation story 6',
+})
+
 const ResultCard = ({ result }) => {
   return (
     <article className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_1.5rem_4rem_rgba(22,58,28,0.12)]">
@@ -19,7 +24,7 @@ const ResultCard = ({ result }) => {
 
 const Result = ({ results = defaultResults }) => {
   return (
-    <section className="w-full bg-[#f4f7f1] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-28" aria-labelledby="results-heading">
+    <section id="results" className="w-full bg-[#f4f7f1] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-28" aria-labelledby="results-heading">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 max-w-2xl sm:mb-14">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#1d4e26]/65 sm:text-sm">
@@ -34,7 +39,7 @@ const Result = ({ results = defaultResults }) => {
           {results.map((result, index) => (
             <div
               key={`${result.name}-${result.duration}`}
-              className={`md:last:col-span-2 lg:col-span-4 ${index === 3 ? 'lg:col-start-3' : ''} ${index === 4 ? 'lg:col-start-7' : ''}`}
+              className={`lg:col-span-4 ${index === 5 ? 'hidden lg:block' : ''}`}
             >
               <ResultCard result={result} />
             </div>

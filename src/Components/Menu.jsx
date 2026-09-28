@@ -5,7 +5,6 @@ const menuLinks = [
   { label: 'Home', href: '#Home' },
   { label: 'About', href: '#about' },
   { label: 'Results', href: '#results' },
-  { label: 'Process', href: '#process' },
   { label: 'FAQs', href: '#faqs' },
   { label: 'Contact us', href: '#Footer' },
 ]

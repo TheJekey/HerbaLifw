@@ -4,7 +4,7 @@ const faqs = [
   {
     question: 'What services do you offer?',
     answer:
-      'We provide personalized health and wellness support including lifestyle coaching, nutrition guidance, fitness planning, and overall wellness consultations tailored to your goals.',
+      'Specialiy We help to loose and gain weight in simple steps and provide personalized health and wellness support including lifestyle coaching, nutrition guidance and overall wellness consultations tailored to your goals.',
   },
   {
     question: 'Is the program suitable for beginners?',
@@ -36,7 +36,7 @@ const FQ = () => {
   }
 
   return (
-    <section id="faq" className="w-full bg-[#f4f7f2] py-16 sm:py-20">
+    <section id="faqs" className="w-full bg-[#f4f7f2] py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
         <div className="mb-10 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#1D4E26]">

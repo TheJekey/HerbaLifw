@@ -6,7 +6,7 @@ import Button from './Button'
 const Home = () => {
     return (
         <section id='Home'
-            className="relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-[#1D4E26] px-5 py-5 text-white sm:px-8 sm:py-7 lg:px-12 lg:py-8"
+            className="relative flex min-h-[87vh] w-full flex-col overflow-hidden bg-[#1D4E26] px-5 py-5 text-white sm:px-8 sm:py-7 lg:px-12 lg:py-8"
             aria-labelledby="home-heading"
         >
             <ShaderGradientCanvas
@@ -73,9 +73,9 @@ const Home = () => {
                         id="home-heading"
                         className="font-[font-3] text-[clamp(2.75rem,8vw,7.5rem)] uppercase leading-[0.9] tracking-tight"
                     >
-                        <span className="block">Transform your</span>
-                        <span className="block">body</span>
-                        <span className="block">with us!</span>
+                        <span className="block">WEIGHT LOOSE</span>
+                        <span className="block">AND GAIN</span>
+                        <span className="block">WITH SIMPLE STEPS!</span>
                     </h1>
                     <div className="mt-8 sm:mt-10 lg:mt-12">
                         <Button
@@ -92,6 +92,13 @@ const Home = () => {
                             <video src="./Video.mp4 " loop autoPlay muted></video>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div className="pointer-events-none absolute inset-x-0 bottom-5 z-20 flex justify-center">
+                <div className="flex items-center gap-2 text-[0.7rem] font-medium uppercase tracking-[0.28em] text-white/80">
+                    <span>Scroll down TO MORE</span>
+                    <span aria-hidden="true" className="animate-bounce text-base">↓</span>
                 </div>
             </div>
         </section>

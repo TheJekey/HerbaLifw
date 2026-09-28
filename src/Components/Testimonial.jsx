@@ -3,19 +3,19 @@ const testimonials = [
     quote: 'I stopped chasing quick fixes and finally built habits that fit my life.',
     name: 'Dilip Tak',
     detail: '12-week wellness plan',
-    image: '',
+    image: './Dilip.PNG',
   },
   {
     quote: 'The support made all the difference. I feel stronger, calmer, and more confident.',
     name: 'Krishna Jangid',
     detail: '6-week transformation',
-    image: '',
+    image: './Krishna.png',
   },
   {
     quote: 'Small changes became my routine. The results have lasted because they feel realistic.',
     name: 'Govind Tak',
     detail: '16-week transformation',
-    image: '',
+    image: './Govind.png',
   },
 ]
 

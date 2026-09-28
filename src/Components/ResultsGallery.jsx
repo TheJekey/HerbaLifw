@@ -1,12 +1,13 @@
-const galleryImages = Array.from({ length: 45 }, (_, index) => ({
-  src: `/Herbalife/image-${index + 5}.jpg`,
-  alt: `Herbalife transformation result ${index + 6}`,
-}))
-
-galleryImages.push(...Array.from({ length: 5 }, (_, index) => ({
-  src: `/Herbalife/image-${index + 55}.jpg`,
-  alt: `Herbalife transformation result ${index + 56}`,
-})))
+const galleryImages = [
+  ...[1, 2, 3, 4, 5, 6].map((index) => ({
+    src: `/Herbalife/image-${index}.png`,
+    alt: `Herbalife transformation result ${index}`,
+  })),
+  ...Array.from({ length: 42 }, (_, index) => ({
+    src: `/Herbalife/image-${index}.jpg`,
+    alt: `Herbalife transformation result ${index + 7}`,
+  })),
+]
 
 const ResultsGallery = () => {
   return (
